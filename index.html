@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PK ERP Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>PK ERP Demo</h1>
+        <p>Modelo académico configurable: programas, ediciones, sesiones, pagos y notas</p>
+      </div>
+      <div class="session-box">
+        <label for="activeUser">Usuario activo</label>
+        <select id="activeUser"></select>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>Módulos</h2>
+        <nav id="moduleNav" class="module-list"></nav>
+      </aside>
+
+      <section class="content">
+        <div class="content-header">
+          <div>
+            <h2 id="moduleTitle"></h2>
+            <p id="moduleDescription" class="muted"></p>
+          </div>
+          <div id="permissionTag" class="permission-tag"></div>
+        </div>
+
+        <div class="card">
+          <h3>Nuevo registro</h3>
+          <form id="recordForm" class="grid-form"></form>
+        </div>
+
+        <div class="card">
+          <h3>Registros</h3>
+          <div id="tableContainer" class="table-wrap"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
