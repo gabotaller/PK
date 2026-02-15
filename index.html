@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Beta ERP Académico (demo offline v0.2) - Grupo Intel / EMTEL</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="logo">GI</div>
+        <div>
+          <h1>Beta ERP Académico <span class="badge">demo offline</span></h1>
+          <small>Prototipo en HTML + CSS + JS (datos en LocalStorage) — v0.2</small>
+        </div>
+      </div>
+
+      <div class="controls">
+        <select id="roleSelect" class="select" title="Cambiar rol (simulación)">
+          <option value="ADMIN">ADMIN</option>
+          <option value="COORD">COORDINADOR</option>
+          <option value="REGISTRO">REGISTRO</option>
+          <option value="INSTRUCTOR">INSTRUCTOR</option>
+        </select>
+
+        <select id="userSelect" class="select" title="Cambiar usuario (simulación)"></select>
+
+        <button class="btn" id="btnExportDB">Exportar datos (JSON)</button>
+        <label class="btn">
+          Importar datos (JSON)
+          <input id="fileImportDB" type="file" accept=".json" style="display:none"/>
+        </label>
+        <button class="btn danger" id="btnReset">Reset demo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sideHead"><b>Navegación</b></div>
+      <nav class="nav" id="nav"></nav>
+    </aside>
+
+    <main class="main" id="view"></main>
+  </div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
